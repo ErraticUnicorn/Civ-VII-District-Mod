@@ -1,14 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<GameData>
-    <LocalizedText>
-        <Row Tag="LOC_DISTRICT_UNIQUE_SCHOLAR_GARDEN_NAME" Language="en_US">
+<Database>
+	<EnglishText>
+        <Row Tag="LOC_DISTRICT_UNIQUE_SCHOLAR_GARDEN_NAME">
             <Text>Scholareum</Text>
         </Row>
-        <Row Tag="LOC_DISTRICT_UNIQUE_SCHOLAR_GARDEN_DESCRIPTION" Language="en_US">
-            <Text>A unique quarter combining the knowledge of a Library with the tranquility of a Garden. Provides increased science for every mountain and quarter tile surrounding it.</Text>
+        <Row Tag="LOC_DISTRICT_UNIQUE_SCHOLAR_GARDEN_DESCRIPTION">
+            <Text>
+                +1[icon:YIELD_SCIENCE] Science Adjacency for every Mountain +1[icon:YIELD_SCIENCE] for every urban quarter.
+                Scholareum's were built to allow the esoteric to become accessible to the populace.
+                Requires a Garden and Library built in an Urban Quarter.
+            </Text>
         </Row>
-        <Row Tag="LOC_DISTRICT_REQUIREMENT_GARDEN_LIBRARY" Language="en_US">
+        </Row>
+        <Row Tag="LOC_DISTRICT_REQUIREMENT_GARDEN_LIBRARY">
             <Text>Requires a Garden and Library built in an urban quarter</Text>
         </Row>
-    </LocalizedText>
-</GameData>
+		<Row Tag="TURNIP_GAMES_DISTRICT_MOD">
+			<Text>Unique District Mod</Text>
+		</Row>
+	</EnglishText>
+</Database>
+<!-- 
+Replace call -->
+<!-- <Replace Tag="LOC_UNIT_MEDJAY_NAME">
+    <Text>Uber-Medjay</Text>
+</Replace> -->

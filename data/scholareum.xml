@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<GameData>
-    <Districts>
-        <Row>
-            <Type>DISTRICT_UNIQUE_SCHOLAREUM</Type>
-            <Name>LOC_DISTRICT_UNIQUE_SCHOLAREUM_NAME</Name>
-            <Description>LOC_DISTRICT_UNIQUE_SCHOLAREUM_DESCRIPTION</Description>
-            <PrerequisiteEra>ERA_ANCIENT</PrerequisiteEra>
-            <SpecialRequirement>SPECIAL_REQUIREMENT_GARDEN_LIBRARY</SpecialRequirement>
-            <!-- Add appropriate yields and other properties -->
-        </Row>
-    </Districts>
-</GameData>
+<Database>
+	<Kinds>
+		<InsertOrIgnore Kind="KIND_CONSTRUCTIBLE"/>
+	</Kinds>
+	<Types>
+		<Row Type="DISTRICT_UNIQUE_SCHOLAREUM" Kind="KIND_QUARTER"/>
+	</Types>
+	<UniqueQuarters>
+		<Row UniqueQuarterType="DISTRICT_UNIQUE_SCHOLAREUM" BuildingType1="BUILDING_LIBRARY" BuildingType2="BUILDING_GARDEN" Name="LOC_DISTRICT_UNIQUE_SCHOLAR_GARDEN_NAME" Description="LOC_DISTRICT_UNIQUE_SCHOLAR_GARDEN_DESCRIPTION"/>
+	</UniqueQuarters>
+	<UniqueQuarterModifiers>
+		<Row UniqueQuarterType="DISTRICT_UNIQUE_SCHOLAREUM" ModifierId="MOD_SCHOLAREUM_EFFECT"/>
+	</UniqueQuarterModifiers>
+</Database>

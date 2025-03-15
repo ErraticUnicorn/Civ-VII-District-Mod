@@ -24,7 +24,7 @@
             <Actions>
                 <UpdateDatabase>
                     <Item>data/scholareum.xml</Item>
-                    <Item>data/scholareum_requirements.xml</Item>
+                    <Item>data/scholareum_game_effect.xml</Item>
                 </UpdateDatabase>
             </Actions>
         </ActionGroup>
