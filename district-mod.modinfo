@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Mod id="district-mod" version="1"
+    xmlns="ModInfo">
+    <Properties>
+        <Name>TURNIP_GAMES_DISTRICT_MOD</Name>
+        <Description>Bringing districts back</Description>
+        <Authors>Turnip Games</Authors>
+        <ShowInBrowser>1</ShowInBrowser>
+        <Package>DistrictMods</Package>
+    </Properties>
+    <Dependencies>
+        <Mod id="age-antiquity" title="LOC_MODULE_AGE_ANTIQUITY_NAME"/>
+    </Dependencies>
+    <ActionCriteria>
+        <Criteria id="always">
+            <AlwaysMet/>
+        </Criteria>
+        <Criteria id="antiquity-age-current">
+            <AgeInUse>AGE_ANTIQUITY</AgeInUse>
+        </Criteria>
+    </ActionCriteria>
+    <ActionGroups>
+        <ActionGroup id="solver-mod-actions" scope="game" criteria="always">
+            <Actions>
+                <UpdateDatabase>
+                    <Item>data/units.xml</Item>
+                </UpdateDatabase>
+            </Actions>
+        </ActionGroup>
+        <ActionGroup id="solver-mod-text" scope="game" criteria="antiquity-age-current">
+            <Actions>
+                <UpdateText>
+                    <Item>text/en_us/UnitText.xml</Item>
+                </UpdateText>
+            </Actions>
+        </ActionGroup>
+    </ActionGroups>
+    <LocalizedText>
+        <File>text/en_us/SolverText.xml</File>
+        <File>l10n/SolverText.xml</File>
+    </LocalizedText>
+</Mod>
+
