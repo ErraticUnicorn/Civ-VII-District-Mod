@@ -9,6 +9,7 @@ import {
 } from "civ7-modding-tools/src";
 
 //TODO: Ensure adjacencies work as expected with multiple quarters, add city center adjacency?
+// Add narrative?
 export const scholareumUniqueQuarter = new UniqueQuarterBuilder({
     actionGroupBundle: ACTION_GROUP_BUNDLE.AGE_ANTIQUITY,
     uniqueQuarter: {
