@@ -9,7 +9,7 @@
         <Package>DistrictMods</Package>
     </Properties>
     <Dependencies>
-        <Mod id="age-antiquity" title="LOC_MODULE_AGE_ANTIQUITY_NAME"/>
+        <Mod id="age-antiquity" title="TURNIP_MODULE_AGE_ANTIQUITY_NAME"/>
     </Dependencies>
     <ActionCriteria>
         <Criteria id="always">
