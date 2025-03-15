@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <GameEffects xmlns="GameEffects">
-	<!-- ==================================================	-->
-	<!--					Quarters						-->
-	<!-- ==================================================	-->
-
 	<Modifier id="MOD_SCHOLAREUM_EFFECT" collection="COLLECTION_ALL_CITIES" effect="EFFECT_CITY_ADJUST_YIELD_PER_NUM_CITIES">
 		<SubjectRequirements>
 			<Requirement type="REQUIREMENT_CITY_HAS_UNIQUE_QUARTER">

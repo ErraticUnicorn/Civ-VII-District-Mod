@@ -2,7 +2,7 @@
 <Mod id="district-mod" version="1"
     xmlns="ModInfo">
     <Properties>
-        <Name>TURNIP_GAMES_DISTRICT_MOD</Name>
+        <Name>Turnip Games' District Mod</Name>
         <Description>Bringing districts back</Description>
         <Authors>Turnip Games</Authors>
         <ShowInBrowser>1</ShowInBrowser>
@@ -28,7 +28,6 @@
                 </UpdateDatabase>
             </Actions>
         </ActionGroup>
-
         <ActionGroup id="district-mod-text" scope="game" criteria="antiquity-age-current">
             <Actions>
                 <UpdateText>
@@ -37,8 +36,5 @@
             </Actions>
         </ActionGroup>
     </ActionGroups>
-    <LocalizedText>
-        <File>text/en_us/ScholareumText.xml</File>
-    </LocalizedText>
 </Mod>
 
