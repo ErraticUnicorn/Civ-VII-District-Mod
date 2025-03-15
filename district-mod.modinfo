@@ -20,24 +20,25 @@
         </Criteria>
     </ActionCriteria>
     <ActionGroups>
-        <ActionGroup id="solver-mod-actions" scope="game" criteria="always">
+        <ActionGroup id="district-mod-actions" scope="game" criteria="always">
             <Actions>
                 <UpdateDatabase>
-                    <Item>data/units.xml</Item>
+                    <Item>data/scholareum.xml</Item>
+                    <Item>data/scholareum_requirements.xml</Item>
                 </UpdateDatabase>
             </Actions>
         </ActionGroup>
-        <ActionGroup id="solver-mod-text" scope="game" criteria="antiquity-age-current">
+
+        <ActionGroup id="district-mod-text" scope="game" criteria="antiquity-age-current">
             <Actions>
                 <UpdateText>
-                    <Item>text/en_us/UnitText.xml</Item>
+                    <Item>text/en_us/DistrictText.xml</Item>
                 </UpdateText>
             </Actions>
         </ActionGroup>
     </ActionGroups>
     <LocalizedText>
-        <File>text/en_us/SolverText.xml</File>
-        <File>l10n/SolverText.xml</File>
+        <File>text/en_us/ScholareumText.xml</File>
     </LocalizedText>
 </Mod>
 

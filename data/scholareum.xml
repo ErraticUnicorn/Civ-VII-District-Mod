@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+    <Districts>
+        <Row>
+            <Type>DISTRICT_UNIQUE_SCHOLAREUM</Type>
+            <Name>LOC_DISTRICT_UNIQUE_SCHOLAREUM_NAME</Name>
+            <Description>LOC_DISTRICT_UNIQUE_SCHOLAREUM_DESCRIPTION</Description>
+            <PrerequisiteEra>ERA_ANCIENT</PrerequisiteEra>
+            <SpecialRequirement>SPECIAL_REQUIREMENT_GARDEN_LIBRARY</SpecialRequirement>
+            <!-- Add appropriate yields and other properties -->
+        </Row>
+    </Districts>
+</GameData>

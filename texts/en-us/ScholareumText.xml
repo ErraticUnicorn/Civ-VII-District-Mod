@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+    <LocalizedText>
+        <Row Tag="LOC_DISTRICT_UNIQUE_SCHOLAR_GARDEN_NAME" Language="en_US">
+            <Text>Scholareum</Text>
+        </Row>
+        <Row Tag="LOC_DISTRICT_UNIQUE_SCHOLAR_GARDEN_DESCRIPTION" Language="en_US">
+            <Text>A unique quarter combining the knowledge of a Library with the tranquility of a Garden. Provides increased science for every mountain and quarter tile surrounding it.</Text>
+        </Row>
+        <Row Tag="LOC_DISTRICT_REQUIREMENT_GARDEN_LIBRARY" Language="en_US">
+            <Text>Requires a Garden and Library built in an urban quarter</Text>
+        </Row>
+    </LocalizedText>
+</GameData>
