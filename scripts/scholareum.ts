@@ -10,6 +10,9 @@ import {
 
 //TODO: Ensure adjacencies work as expected with multiple quarters, add city center adjacency?
 // Add narrative?
+
+//TODO: Debuging things to try, look up modifer ids in the db in the live game to see if they got loaded
+// Can also chnge requirement to both buildings being in the quarter rather than our unique quarter
 export const scholareumUniqueQuarter = new UniqueQuarterBuilder({
     actionGroupBundle: ACTION_GROUP_BUNDLE.AGE_ANTIQUITY,
     uniqueQuarter: {
@@ -33,7 +36,7 @@ export const scholareumUniqueQuarter = new UniqueQuarterBuilder({
             }],
             arguments: [
                 { name: "YieldType", value: YIELD.SCIENCE },
-                { name: "YieldChange", value: 1 },
+                { name: "Amount", value: 1 },
                 { name: "AdjacentTerrain", value: "TERRAIN_MOUNTAIN" },
                 { name: "Tooltip", value: 'LOC_QUARTER_SCHOLAREUM_NAME' }
             ]
@@ -50,7 +53,7 @@ export const scholareumUniqueQuarter = new UniqueQuarterBuilder({
             }],
             arguments: [
                 { name: "YieldType", value: YIELD.SCIENCE },
-                { name: "YieldChange", value: 1 },
+                { name: "Amount", value: 1 },
                 { name: "AdjacentDistrict", value: "DISTRICT_URBAN" },
                 { name: "Tooltip", value: 'LOC_QUARTER_SCHOLAREUM_NAME' }
             ]
