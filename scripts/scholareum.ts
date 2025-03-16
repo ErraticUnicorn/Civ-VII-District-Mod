@@ -29,7 +29,6 @@ export const scholareumUniqueQuarter = new UniqueQuarterBuilder({
         modifier: {
             collection: COLLECTION.CITY_PLOT_YIELDS,
             effect: EFFECT.PLOT_ADJUST_YIELD,
-            permanent: true,
             requirements: [{
                 type: REQUIREMENT.PLOT_UNIQUE_QUARTER,
                 arguments: [{ name: 'UniqueQuarterType', value: 'QUARTER_SCHOLAREUM' }]
@@ -46,7 +45,6 @@ export const scholareumUniqueQuarter = new UniqueQuarterBuilder({
         modifier: {
             collection: COLLECTION.CITY_PLOT_YIELDS,
             effect: EFFECT.PLOT_ADJUST_YIELD,
-            permanent: true,
             requirements: [{
                 type: REQUIREMENT.PLOT_UNIQUE_QUARTER,
                 arguments: [{ name: 'UniqueQuarterType', value: 'QUARTER_SCHOLAREUM' }]
