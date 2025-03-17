@@ -33,6 +33,7 @@ export const scholareumUniqueQuarter = new UniqueQuarterBuilder({
                 type: REQUIREMENT.PLOT_UNIQUE_QUARTER,
                 arguments: [{ name: 'UniqueQuarterType', value: 'QUARTER_SCHOLAREUM' }]
             }],
+            permanent: true,
             arguments: [
                 { name: "YieldType", value: YIELD.SCIENCE },
                 { name: "Amount", value: 1 },
@@ -49,6 +50,7 @@ export const scholareumUniqueQuarter = new UniqueQuarterBuilder({
                 type: REQUIREMENT.PLOT_UNIQUE_QUARTER,
                 arguments: [{ name: 'UniqueQuarterType', value: 'QUARTER_SCHOLAREUM' }]
             }],
+            permanent: true,
             arguments: [
                 { name: "YieldType", value: YIELD.SCIENCE },
                 { name: "Amount", value: 1 },
