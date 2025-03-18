@@ -1,5 +1,5 @@
 import { Mod } from 'civ7-modding-tools/src';
-import { scholareumUniqueQuarter } from './scholareum';
+import { scholariumUniqueQuarter } from './scholarium';
 
 let mod = new Mod({
     id: 'district-mod',
@@ -10,7 +10,7 @@ let mod = new Mod({
 });
 
 mod.add([
-    scholareumUniqueQuarter,
+    scholariumUniqueQuarter,
 ]);
 
 mod.build('./dist');

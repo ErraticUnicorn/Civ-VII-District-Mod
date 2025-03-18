@@ -60,3 +60,48 @@ export const scholariumUniqueQuarter = new UniqueQuarterBuilder({
         }
     }),
 ])
+
+/*
+Zaibatsus work like this generally:
+<?xml version="1.0" encoding="UTF-8"?>
+<Database>
+    <Types>
+        <Row Type="QUARTER_SCHOLARIUM" Kind="KIND_QUARTER"/>
+    </Types>
+    <UniqueQuarters>
+        <Row UniqueQuarterType="QUARTER_SCHOLARIUM" BuildingType1="BUILDING_LIBRARY" BuildingType2="BUILDING_GARDEN" Name="LOC_QUARTER_SCHOLARIUM_NAME" Description="LOC_QUARTER_SCHOLARIUM_DESCRIPTION" TraitType="TRAIT_ANTIQUITY_CIV"/>
+    </UniqueQuarters>
+    <UniqueQuarterModifiers>
+        <Row UniqueQuarterType="QUARTER_SCHOLARIUM" ModifierId="MOD_974C1BED7A5745368492C80EE7A9F055"/>
+        <Row UniqueQuarterType="QUARTER_SCHOLARIUM" ModifierId="MOD_97C7E3AD3E8F462E85F7D0FC03F58FE4"/>
+        <Row UniqueQuarterType="QUARTER_SCHOLARIUM" ModifierId="MOD_D4C3AB4E03AB4FF484F4CB5194BBDEDC"/>
+    </UniqueQuarterModifiers>
+    <GameModifiers>
+        <Row ModifierId="MOD_974C1BED7A5745368492C80EE7A9F055"/>
+        <Row ModifierId="MOD_97C7E3AD3E8F462E85F7D0FC03F58FE4"/>
+        <Row ModifierId="MOD_D4C3AB4E03AB4FF484F4CB5194BBDEDC"/>
+    </GameModifiers>
+    <Adjacency_YieldChanges>
+		<Row ID="SCHOLARIUM_GOLD_TEST_ADJACENCY" Age="AGE_ANTIQUITY" YieldType="YIELD_GOLD" YieldChange="5" TilesRequired="1" ProjectMaxYield="true" AdjacentUniqueQuarterType="QUARTER_SCHOLARIUM"/>
+		<!-- <Row ID="ZaibatsuWildcardZaibatsuProduction" Age="AGE_MODERN" YieldType="YIELD_PRODUCTION" YieldChange="1" TilesRequired="1" ProjectMaxYield="true" AdjacentUniqueQuarterType="QUARTER_ZAIBATSU"/> -->
+    </Adjacency_YieldChanges>
+	<Constructible_WildcardAdjacencies>
+		<Row YieldChangeId="SCHOLARIUM_GOLD_TEST_ADJACENCY" RequiresActivation="true"/>
+		<!-- <Row YieldChangeId="ZaibatsuWildcardZaibatsuProduction" RequiresActivation="true"/> -->
+	</Constructible_WildcardAdjacencies>
+</Database>
+
+<Modifier id="MOD_D4C3AB4E03AB4FF484F4CB5194BBDEDC" collection="COLLECTION_CITY_PLOT_YIELDS" effect="EFFECT_PLOT_ADJUST_YIELD" permanent="true">
+    <SubjectRequirements>
+        <Requirement type="REQUIREMENT_PLOT_UNIQUE_QUARTER">
+            <Argument name="UniqueQuarterType">QUARTER_SCHOLARIUM</Argument>
+        </Requirement>
+    </SubjectRequirements>
+    <Argument name="PlotEffect">PLOTEFFECT_IS_BURNING</Argument>
+    <Argument name="ConstructibleAdjacency">SCHOLARIUM_GOLD_TEST_ADJACENCY</Argument>
+</Modifier>
+
+However, this has not resulted in any visible change either
+
+<!-- generated with https://github.com/izica/civ7-modding-tools -->
+*/
