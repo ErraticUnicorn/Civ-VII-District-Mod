@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GameEffects xmlns="GameEffects">
+    <Modifier id="MOD_SLTH_SCHOLARIUM_ADJACENT_MOUNTAIN" collection="COLLECTION_ALL_CITIES" effect="EFFECT_CITY_ACTIVATE_CONSTRUCTIBLE_ADJACENCY" permanent="true">
+        <SubjectRequirements>
+            <Requirement type="REQUIREMENT_CITY_HAS_UNIQUE_QUARTER">
+                <Argument name="UniqueQuarterType">QUARTER_SCHOLARIUM</Argument>
+            </Requirement>
+        </SubjectRequirements>
+        <Argument name="ConstructibleAdjacency">SlthMountainScience</Argument>
+    </Modifier>
+    <Modifier id="MOD_SLTH_SCHOLARIUM_ADJACENT_DISTRICT" collection="COLLECTION_ALL_CITIES" effect="EFFECT_CITY_ACTIVATE_CONSTRUCTIBLE_ADJACENCY" permanent="true">
+        <SubjectRequirements>
+            <Requirement type="REQUIREMENT_CITY_HAS_UNIQUE_QUARTER">
+                <Argument name="UniqueQuarterType">QUARTER_SCHOLARIUM</Argument>
+            </Requirement>
+        </SubjectRequirements>
+        <Argument name="ConstructibleAdjacency">SlthScholariumScience</Argument>
+    </Modifier>
+</GameEffects>
+<!-- generated with https://github.com/izica/civ7-modding-tools -->

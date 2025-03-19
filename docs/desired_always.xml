@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Database>
+    <Types>
+        <Row Type="QUARTER_SCHOLARIUM" Kind="KIND_QUARTER"/>
+        <Row Type="MOD_SLTH_SCHOLARIUM_ADJACENCY_TYPE" Kind="KIND_MODIFIER"/>
+    </Types>
+    <DynamicModifiers>
+        <Row ModifierType="MOD_SLTH_SCHOLARIUM_ADJACENCY_TYPE" CollectionType="COLLECTION_ALL_CITIES" EffectType="EFFECT_CITY_ACTIVATE_CONSTRUCTIBLE_ADJACENCY"/>
+    </DynamicModifiers>
+    <UniqueQuarters>
+        <Row UniqueQuarterType="QUARTER_SCHOLARIUM" BuildingType1="BUILDING_LIBRARY" BuildingType2="BUILDING_GARDEN" Name="LOC_QUARTER_SCHOLARIUM_NAME" Description="LOC_QUARTER_SCHOLARIUM_DESCRIPTION" TraitType="TRAIT_ANTIQUITY_CIV"/>
+    </UniqueQuarters>
+    <UniqueQuarterModifiers>
+        <Row UniqueQuarterType="QUARTER_SCHOLARIUM" ModifierId="MOD_SLTH_SCHOLARIUM_ADJACENT_MOUNTAIN"/>
+        <Row UniqueQuarterType="QUARTER_SCHOLARIUM" ModifierId="MOD_SLTH_SCHOLARIUM_ADJACENT_DISTRICT"/>
+    </UniqueQuarterModifiers>
+    <GameModifiers>
+        <Row ModifierId="MOD_SLTH_SCHOLARIUM_ADJACENT_MOUNTAIN"/>
+        <Row ModifierId="MOD_SLTH_SCHOLARIUM_ADJACENT_DISTRICT"/>
+    </GameModifiers>
+    <Adjacency_YieldChanges>
+        <Row ID="SlthMountainScience" AdjacentTerrain="TERRAIN_MOUNTAIN" ProjectMaxYield="1" TilesRequired="1" YieldChange="1" YieldType="YIELD_SCIENCE" Age="AGE_ANTIQUITY"/>
+        <Row ID="SlthScholariumScience" AdjacentQuarter="1" YieldChange="1" YieldType="YIELD_SCIENCE" Age="AGE_ANTIQUITY"/>
+    </Adjacency_YieldChanges>
+    <Constructible_Adjacencies>
+        <Row ConstructibleType="BUILDING_LIBRARY" YieldChangeId="SlthMountainScience" RequiresActivation="1"/>
+        <Row ConstructibleType="BUILDING_LIBRARY" YieldChangeId="SlthScholariumScience" RequiresActivation="1"/>
+    </Constructible_Adjacencies>
+</Database>
