@@ -5,7 +5,6 @@ import { EnhancedDatabaseNode } from '../nodes/ehanced_database_node';
 import { DynamicModifierNode } from '../nodes/dynamic_modifier_node';
 import { TypeNode } from 'civ7-modding-tools';
 
-
 export class EnhancedUniqueQuarterBuilder extends UniqueQuarterBuilder {
     constructor(payload: any = {}) {
         super(payload);
@@ -14,6 +13,10 @@ export class EnhancedUniqueQuarterBuilder extends UniqueQuarterBuilder {
         
         if (originalNode.types) {
             this._always.types = [...originalNode.types];
+        }
+
+        if (originalNode.uniqueQuarters) {
+            this._always.uniqueQuarters = [...originalNode.uniqueQuarters];
         }
     }
     
@@ -47,7 +50,6 @@ export class EnhancedUniqueQuarterBuilder extends UniqueQuarterBuilder {
             }
 
             if (item instanceof TypeNode) {
-                console.log(this._always.types.length)
                 if (!this._always.types) {
                     this._always.types = [];
                 }
