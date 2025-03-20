@@ -15,6 +15,7 @@ import { DynamicModifierBuilder } from './builders/dynamic_modifier_builder';
 //TODO: Still doesn't work. We need to convert booleans to 0/1, remove some default arguments like NO_RESOURCECLASS
 // We still need to abstract more layers of this so we can create new quarters quite simply.
 // i.e. { NewQuarter, Adjacency} 
+//TODO: Start swapping working code to how we handle ids and see what breaks
 const YIELD_MOUNTAIN_ADJACENCY_ID = "ModScholariumMountainScience"
 const YIELD_QUARTER_ADJACENCY_ID = "ModScholariumQuarterScience"
 const SCHOLARIUM_ADJACENCY_TYPE = "MOD_SCHOLARIUM_SCHOLARIUM_ADJACENCY";
