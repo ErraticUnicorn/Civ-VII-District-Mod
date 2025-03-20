@@ -17,4 +17,4 @@ C:\[YOUR_USER]\AppData\Local\Firaxis Games\Sid Meier's Civilization VII\Mods
 
 # Thanks
 
-A huge thanks to my friends and Izica for making a great modding tool!
+A huge thanks to my friends, Izica for making a great modding tool and slothoth for helping me troubleshoot!

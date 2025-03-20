@@ -1,4 +1,4 @@
-import { TypeNode } from "civ7-modding-tools";
+import { TypeNode, KIND } from "civ7-modding-tools";
 import { DynamicModifierNode } from "../nodes/dynamic_modifier_node";
 
 export class DynamicModifierBuilder {
@@ -11,7 +11,8 @@ export class DynamicModifierBuilder {
       effectType: string;
     }) {
       this._typeNode = new TypeNode({
-        type: config.modifierType
+        type: config.modifierType,
+        kind: KIND.MODIFIER,
       });
       
       this._dynamicModifierNode = new DynamicModifierNode({
