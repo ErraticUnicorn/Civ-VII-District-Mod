@@ -7,50 +7,60 @@ import { TypeNode } from 'civ7-modding-tools';
 
 
 export class EnhancedUniqueQuarterBuilder extends UniqueQuarterBuilder {
-    _db_node: EnhancedDatabaseNode = new EnhancedDatabaseNode();
+    constructor(payload: any = {}) {
+        super(payload);
+        const originalNode = this._always;
+        this._always = new EnhancedDatabaseNode();
+        
+        if (originalNode.types) {
+            this._always.types = [...originalNode.types];
+        }
+    }
     
     bind(items: any[]) {
         const standardItems = items.filter(item => 
             !(item instanceof AdjacencyYieldChangeBuilder || 
               item instanceof ConstructibleAdjacencyBuilder || 
-              item.constructor.name === 'TypeNode' ||
-              item.constructor.name === 'DynamicModifierNode'));
+              item instanceof TypeNode ||
+              item instanceof DynamicModifierNode)
+        )
         
         super.bind(standardItems);
         
         items.forEach(item => {
             if (item instanceof AdjacencyYieldChangeBuilder) {
-                if (!this._db_node.adjacencyYieldChanges) {
-                    this._db_node.adjacencyYieldChanges = [];
+                if (!this._always.adjacencyYieldChanges) {
+                    this._always.adjacencyYieldChanges = [];
                 }
                 
                 const node = item.getNode();
-                this._db_node.adjacencyYieldChanges.push(node);
+                this._always.adjacencyYieldChanges.push(node);
             }
             
             if (item instanceof ConstructibleAdjacencyBuilder) {
-                if (!this._db_node.constructibleAdjacencies) {
-                    this._db_node.constructibleAdjacencies = [];
+                if (!this._always.constructibleAdjacencies) {
+                    this._always.constructibleAdjacencies = [];
                 }
                 
                 const node = item.getNode();
-                this._db_node.constructibleAdjacencies.push(node);
+                this._always.constructibleAdjacencies.push(node);
             }
 
             if (item instanceof TypeNode) {
-                if (!this._db_node.typeModifiers) {
-                    this._db_node.types = [];
+                console.log(this._always.types.length)
+                if (!this._always.types) {
+                    this._always.types = [];
                 }
                 
-                this._db_node.typeModifiers.push(item);
+                this._always.types.push(item);
             }
             
             if (item instanceof DynamicModifierNode) {
-                if (!this._db_node.dynamicModifiers) {
-                    this._db_node.dynamicModifiers = [];
+                if (!this._always.dynamicModifiers) {
+                    this._always.dynamicModifiers = [];
                 }
                 
-                this._db_node.dynamicModifiers.push(item);
+                this._always.dynamicModifiers.push(item);
             }
         });
         

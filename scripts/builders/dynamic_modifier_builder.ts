@@ -28,4 +28,4 @@ export class DynamicModifierBuilder {
     getDynamicModifierNode() {
       return this._dynamicModifierNode;
     }
-  }
+}

@@ -4,7 +4,6 @@ import { TypeNode } from 'civ7-modding-tools';
 
 export class EnhancedDatabaseNode extends DatabaseNode {
     dynamicModifiers: DynamicModifierNode[] = [];
-    typeModifiers: TypeNode[] = [];
 
     constructor(payload: Partial<any> = {}) {
         super(payload);
@@ -12,14 +11,14 @@ export class EnhancedDatabaseNode extends DatabaseNode {
     toXmlElement() {
         const baseXml = super.toXmlElement();
         
-        if (!baseXml || this.dynamicModifiers.length === 0) {
-            return baseXml;
+        if (!baseXml) {
+          return baseXml;
         }
 
-        baseXml.Database.DynamicModifiers = {
-            Row: this.dynamicModifiers.map(modifier => modifier.toXmlElement().Row)
-        };
+        if (this.dynamicModifiers && this.dynamicModifiers.length > 0) {
+            baseXml.Database.DynamicModifiers = this.dynamicModifiers.map(mod => mod.toXmlElement())
+        }
         
-        return baseXml;
+        return baseXml
     }
 }
